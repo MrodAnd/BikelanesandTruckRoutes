@@ -28,23 +28,6 @@
             overflow: hidden;
         }
 
-        nav {
-            padding: 1rem;
-            border-bottom: 1px solid #000;
-            display: flex;
-        }
-
-        .nav-links {
-            flex-grow: 1;
-            justify-content: end;
-            display: flex;
-        }
-
-        .nav-link {
-            display: inline-block;
-            font-size: .9rem;
-        }
-
         #content-container {
             flex-grow: 1;
             display: flex;
@@ -52,11 +35,14 @@
         }
 
         #sidebar {
-            width: 40px;
-            padding: 1.2rem;
-            font-size: 2.2rem;
-            overflow-y: scroll;
-            box-sizing: border-box;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1;
+            width: 250px;
+            background: #ececec;
+            padding: 15px;
+            border-radius: 10px;
         }
 
         #map {
@@ -75,46 +61,45 @@
             font-size: 2.8rem;
         }
 
-        @media only screen and (max-width: 1200px) {
-            #content-container {
-                flex-direction: column-reverse;
-            }
+        #map {
+            height: 100%;
+            flex-shrink: 0;
+        }
 
-            #map {
-                height: 100%;
-                flex-shrink: 0;
-            }
-
-            #sidebar {
-                width: 100%;
-            }
+        .button-lanes {
+            font-weight: 700;
+            font-size: 1rem;
+            left: 10px;
         }
     </style>
 </head>
 
 <body>
     <!-- sidebar -->
-    <div class="sidebar">
+    <div id="sidebar">
         <div class="title">
             Bike Lanes and Truck Routes in New York City
         </div>
         <hr />
-        <div class="description">
-            Truck routes can be dangerous places for bikers. 50% of fatal bike and pedestrian crashes happened on truck
-            routes even though they make up just 13% of City roads. This map shows where existing bike lanes (in green)
-            and truck
-            routes (in orange) are located. It also shows streets (in red) that have both bike lanes and truck routes.
-        </div>
+
+        Truck routes can be dangerous places for bikers. 50% of fatal bike and pedestrian crashes happened on truck
+        routes even though they make up just 13% of City roads. This map shows where existing bike lanes (in green)
+        and truck
+        routes (in orange) are located. It also shows streets (in red) that have both bike lanes and truck routes.
+
         <hr />
-        <!-- button to show bike or truck lanes-->
-        <button class="button-18" id="bike-toggle">click this button to toggle bike lanes on and off</button>
-    </div>
-    <hr />
-    <button class="button-20" id="trucks-toggle">click this button to toggle truck routes on and off</button>
-    </div>
-    <hr />
-    <button class="button-19" id="bikeandtrucks-toggle">click this button to toggle streets with both a bike lane and
-        bus route on and off</button>
+
+        <button class="button-lanes" id="bike-toggle">Toggle Bike Lanes </button>
+
+        <hr />
+
+        <button class="button-lanes" id="trucks-toggle">Toggle Truck Routes</button>
+
+        <hr />
+
+        <button class="button-lanes" id="bikeandtrucks-toggle">Toggle Streets with both Bike Lanes and
+            Truck Routes</button>
+
     </div>
 
 
