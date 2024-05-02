@@ -6,4 +6,4 @@ The goal of this research is to show the relationship between truck routes and b
 
 Google maps and other trip planner apps will usually send Bikers to bike lane streets instead of adjacent non bike lane streets. However, truck activity is usually not considered when developing these trip routes. This map aims to show if bike accidents involving trucks happen on streets that are also dedicated to bikers. 
 
-This map was created using Mapbox as well as truck routes and bike lanes that were exported from QGIS. 
+This map was created using Mapbox as well as truck routes and bike lanes that were exported from QGIS. The Author is Marcos Rodriguez Anderson, a Master of Urban Planning Candidate at NYU Wagner.
