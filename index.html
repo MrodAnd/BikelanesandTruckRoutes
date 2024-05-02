@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bike and Truck Map</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.0/mapbox-gl.js"></script>
+    <style>
+        html,
+        head,
+        body,
+        #main-container {
+            height: 100%;
+            width: 100%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main-container {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        nav {
+            padding: 1rem;
+            border-bottom: 1px solid #000;
+            display: flex;
+        }
+
+        .nav-links {
+            flex-grow: 1;
+            justify-content: end;
+            display: flex;
+        }
+
+        .nav-link {
+            display: inline-block;
+            font-size: .9rem;
+        }
+
+        #content-container {
+            flex-grow: 1;
+            display: flex;
+            min-height: 0;
+        }
+
+        #sidebar {
+            width: 40px;
+            padding: 1.2rem;
+            font-size: 2.2rem;
+            overflow-y: scroll;
+            box-sizing: border-box;
+        }
+
+        #map {
+            height: 100%;
+            flex-grow: 1;
+        }
+
+        .description {
+            font-weight: 1000;
+            font-size: 1.2rem;
+        }
+
+
+        .title {
+            font-weight: 1000;
+            font-size: 2.8rem;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            #content-container {
+                flex-direction: column-reverse;
+            }
+
+            #map {
+                height: 100%;
+                flex-shrink: 0;
+            }
+
+            #sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- sidebar -->
+    <div class="sidebar">
+        <div class="title">
+            Bike Lanes and Truck Routes in New York City
+        </div>
+        <hr />
+        <div class="description">
+            Truck routes can be dangerous places for bikers. 50% of fatal bike and pedestrian crashes happened on truck
+            routes even though they make up just 13% of City roads. This map shows where existing bike lanes (in green)
+            and truck
+            routes (in orange) are located. It also shows streets (in red) that have both bike lanes and truck routes.
+        </div>
+        <hr />
+        <!-- button to show bike or truck lanes-->
+        <button class="button-18" id="bike-toggle">click this button to toggle bike lanes on and off</button>
+    </div>
+    <hr />
+    <button class="button-20" id="trucks-toggle">click this button to toggle truck routes on and off</button>
+    </div>
+    <hr />
+    <button class="button-19" id="bikeandtrucks-toggle">click this button to toggle streets with both a bike lane and
+        bus route on and off</button>
+    </div>
+
+
+    <!-- map container div -->
+    <div id="map"></div>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    </div>
+</body>
+
+</html>
