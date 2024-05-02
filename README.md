@@ -1,4 +1,4 @@
-# Bike Lanes and Truck routes
+# Bike Lanes and Truck Routes
 
 This file shows bike lane and truck routes in NYC. It also shows what streets have both bike lanes and truck routes. 
 
